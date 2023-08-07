@@ -1,0 +1,536 @@
+@import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&family=DM+Sans:opsz@9..40&family=Maven+Pro:wght@400;500;700&family=Merienda:wght@400;700&family=Poppins&display=swap')
+@import 'variables'
+@import 'hamburger'
+*
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+
+.container
+    margin: 0 auto
+    width: 1200px
+.popup
+    display: none
+.header
+    position: absolute
+    height: 55px
+    width: 100vw
+    display: flex
+    .logo
+        position: absolute
+        height: 55px
+    &__nav
+        padding-left: 400px
+        padding-top: 10px
+        display: flex
+        height: 55px
+        justify-content: space-evenly
+        align-items: center
+        &_group
+            width: 406px
+            display: flex
+            justify-content: space-between
+        a
+            text-decoration: none
+            position: relative
+            cursor: pointer
+            // padding-left: 45px
+            color: #FFF
+            font-variant-numeric: lining-nums proportional-nums
+            font-family: Poppins
+            font-size: 16px
+            font-style: normal
+            font-weight: 500
+            line-height: 24px
+            transition: 0.5s ease all
+            &:before
+                content: ''
+                position: absolute
+                width: 100%
+                height: 4px
+                border-radius: 4px
+                background-color: #fff
+                bottom: 0
+                left: 0
+                transform-origin: right
+                transform: scaleX(0)
+                transition: transform .3s ease-in-out
+            &:hover:before
+                transform-origin: left
+                transform: scaleX(1)
+            &_phone
+                margin-left: 100px
+                position: relative
+                text-decoration: none
+                width: 159px
+                color: #FFF
+                font-family: Poppins
+                font-size: 16px
+                font-style: normal
+                font-weight: 400
+                line-height: 24px
+                transition: 0.5s ease all
+                &:hover
+                    transform: scale(110%)
+                    transition: 0.5s ease all
+                    color: #d3b47f
+                    box-shadow: 1px #fff
+                img
+                    position: absolute
+                    right: 105%
+
+.promo
+    padding-top: 264px
+    height: 901px
+    background: url('../img/promo_bg.png') center/cover no-repeat
+    .title_small
+        color: #FFF
+        font-variant-numeric: lining-nums proportional-nums
+        font-family: Poppins
+        font-size: 24px
+        font-style: normal
+        font-weight: 500
+        line-height: 32px
+        letter-spacing: 1.44px
+    .title_big
+        width: 1168px
+        color: #FFF
+        font-family: Poppins
+        font-size: 64px
+        font-style: normal
+        font-weight: 700
+        line-height: 88px
+    .btn__wrapper
+        display: flex
+        justify-content: space-between
+    .btn
+        margin-top: 40px
+        cursor: pointer
+        color: #FFF
+        font-family: Poppins
+        font-size: 18px
+        font-style: normal
+        font-weight: 500
+        line-height: 24px
+        background: #3A4574
+        width: 270px
+        height: 100px
+        border: none
+        transition: 0.5s ease all
+        &:hover
+            transform: scale(105%)
+            transition: 0.5s ease all
+    .btn__group
+        display: flex
+        justify-content: space-between
+        align-items: center
+        .btn_circle
+            cursor: pointer
+            background: transparent
+            margin-left: 25px
+            color: #FFF
+            text-align: center
+            font-variant-numeric: lining-nums proportional-nums
+            font-family: Poppins
+            font-size: 16px
+            font-style: normal
+            font-weight: 600
+            line-height: 24px
+            width: 48px
+            height: 48px
+            border: 1px solid #FFFFFF
+            border-radius: 100%
+            transition: 0.5s ease all
+            &:hover
+                transform: scale(110%)
+                transition: 0.5s ease all
+                border: 1px solid #d3b47f
+.menu
+    height: 808px
+    margin-top: 130px
+    &__wrapper
+        display: flex
+    &__list
+        display: flex
+        flex-direction: column
+        width: 500px
+        flex-wrap: nowrap
+        &_item
+            padding: 20px 0 20px 0
+            border-bottom: 1px solid #E7E7E7
+            &_title
+                color: #000
+                font-family: Poppins
+                font-size: 24px
+                font-style: normal
+                font-weight: 600
+                line-height: 32px
+            &_subtitle
+                color: #000
+                font-family: Poppins
+                font-size: 18px
+                font-style: normal
+                font-weight: 400
+                line-height: 32px
+            &_subtitle > span
+                display: inline-block
+                margin-bottom: 3px
+                margin-left: 12px
+                margin-right: 12px
+                width: 5px
+                height: 5px
+                border: 1px solid #D3B47F
+                background-color: #D3B47F
+                border-radius: 100%
+    &__images
+        display: flex
+        position: relative
+        width: 471px
+        height: 502px
+        left: 100px
+        border: 2px solid #D3B47F
+        img
+            position: absolute
+        &_img_1
+            top: 101px
+            right: 214px
+        &_img_2
+            left: 273px
+            bottom: 62px
+.feedback
+    height: 782px
+    background-color: #3A4574
+    display: flex
+    align-items: center
+    justify-content: center
+    .slider_feedback
+        position: relative
+        display: flex
+        overflow: hidden
+        &__inner
+            overflow: hidden
+            height: 100%
+            width: 100%
+            margin: 0 auto
+            position: relative
+            display: flex
+            justify-content: center
+            align-items: center
+        &_btn
+            cursor: pointer
+            position: absolute
+            background: none
+            border: none
+            z-index: 1000
+            &_right
+                right: 0%
+                top: 50%
+            &_left
+                top: 50%
+                left: 0%
+        &__items
+            display: flex
+            flex-direction: row
+            align-items: center
+            justify-content: center
+            text-align: center
+            margin: 0 auto
+        &__item
+            &_img
+                width: 83px
+                height: 58px
+            &_title
+                padding-top: 34px
+                color: #D3B47F
+                text-align: center
+                font-family: Poppins
+                font-size: 36px
+                font-style: normal
+                font-weight: 600
+                line-height: 40px
+            &_subtitle
+                width: 700px
+                margin: 0 auto
+                padding-top: 20px
+                color: #FFF
+                text-align: center
+                font-family: Poppins
+                font-size: 16px
+                font-style: normal
+                font-weight: 400
+                line-height: 40px
+            &_author
+                padding-top: 40px
+                color: #D3B47F
+                text-align: center
+                font-family: Poppins
+                font-size: 24px
+                font-style: normal
+                font-weight: 600
+                line-height: 40px
+                letter-spacing: 5.88px
+            &__inner
+                width: 100%
+                flex-direction: column
+                align-items: center
+                justify-content: center
+                text-align: center
+                margin: 0 auto
+.meals
+    height: 1929px
+    padding-top: 109px
+    &__wrapper
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+    &_item
+        padding-top: 30px
+        display: flex
+        align-items: center
+        &_content
+            padding-left: 30px
+            position: relative
+            display: flex
+            flex-direction: column
+        span
+            position: absolute
+            width: 108px
+            height: 2px
+            top: 44%
+            left: -5%
+            background-color: #D3B47F
+    &_title
+        color: #000
+        font-family: Poppins
+        font-size: 40px
+        font-style: normal
+        font-weight: 700
+        line-height: 88px
+    &_subtitle
+        font-family: Poppins
+        font-size: 16px
+        font-style: normal
+        font-weight: 400
+        line-height: 32px
+.places
+    height: 608px
+    background-color: #3A4574
+    &_title
+        color: #FFF
+        font-family: Poppins
+        font-size: 48px
+        font-style: normal
+        font-weight: 700
+        line-height: 88px
+    &_subtitle
+        color: #FFF
+        font-family: Poppins
+        font-size: 16px
+        font-style: normal
+        font-weight: 400
+        line-height: 32px
+    &_slider
+        // overflow: hidden
+        height: 908px
+        margin: 0 auto
+        width: 100%
+        position: relative
+        display: flex
+        justify-content: center
+        align-items: center
+        &_overflow-wrapper
+            overflow: hidden
+            position: relative
+            height: 100%
+            width: 100%
+        &_text
+            position: absolute
+            top: 68px
+            width: 569px
+            left: 376px
+        &_items
+            position: absolute
+            left: 25%
+            width: 970px
+        &_inner
+            overflow: hidden
+            height: 908px
+            width: 100%
+            margin: 0 auto
+            position: relative
+            display: flex
+            justify-content: center
+            align-items: center
+        &_item
+            margin: 0 20px 0 20px
+            width: 970px
+            transform: translateY(150px)
+            img
+                top: 20%
+        &_btn
+            z-index: 1000
+            cursor: pointer
+            position: absolute
+            background: none
+            border: none
+            &_right
+                width: 70px
+                height: 70px
+                right: 18%
+                top: 12%
+            &_left
+                width: 70px
+                height: 70px
+                top: 12%
+                right: 22%
+.contacts
+    margin-top: 404px
+    height: 550px
+    &__wrapper
+        display: grid
+        grid-template: 1fr / 1fr 1fr
+    &__list
+        display: flex
+        flex-direction: column
+        align-items: start
+    &__item
+        display: flex
+        align-items: center
+        margin-top: 35px
+        height: 64px
+        width: 100%
+        align-items: flex-start
+        &_title
+            padding-left: 16px
+            text-decoration: none
+            color: #2E2E2E
+            font-variant-numeric: lining-nums proportional-nums
+            font-family: Poppins
+            font-size: 24px
+            font-style: normal
+            font-weight: 700
+            line-height: 32px
+        &_subtitle
+            padding-left: 16px
+            color: #2E2E2E
+            font-family: Poppins
+            font-size: 16px
+            font-style: normal
+            font-weight: 400
+            line-height: 32px
+    &__circle
+        display: flex
+        border-radius: 100%
+        background-color: #d3b47f
+        height: 64px
+        width: 64px
+        align-items: center
+        justify-content: center
+    &__title
+        color: #000
+        font-family: Poppins
+        font-size: 48px
+        font-style: normal
+        font-weight: 700
+        line-height: 88px
+        align-self: start
+.form
+    &_title
+        color: #000
+        font-family: Poppins
+        font-size: 48px
+        font-style: normal
+        font-weight: 700
+        line-height: 88px
+    &__grid
+        display: grid
+        grid-template: 122px 167px 100px / 320px 320px
+        gap: 20px
+    &__block
+        label
+            display: block
+            color: #000
+            font-family: Poppins
+            font-size: 16px
+            font-style: normal
+            font-weight: 400
+            line-height: 32px
+        input
+            padding: 28px 16px 28px 16px
+            width: 320px
+            height: 80px
+            border: 1px solid #CCC
+    &_textarea
+        width: 100%
+        grid-area: 2 / 1 / 2 / 3
+        input
+            width: 100%
+            height: 125px
+    &_submit
+        .btn
+            cursor: pointer
+            color: #fff
+            font-family: Poppins
+            font-size: 24px
+            font-style: normal
+            font-weight: 500
+            line-height: 24px
+            background: #3a4574
+            width: 270px
+            height: 100px
+            border: none
+.footer
+    height: 1218px
+    &__wrapper
+        position: relative
+    &__map
+        height: 547px
+        width: 1200px
+        &_size
+            max-width: 100%
+            overflow: hidden
+            color: red
+            width: 1200px
+            height: 547px
+            #embedded-map-display
+                height: 100%
+                width: 100%
+                max-width: 100%
+                .map-iframe
+                    height: 100%
+                    width: 100%
+                    border: 0
+    .logo
+        position: absolute
+        left: 0%
+    &__nav
+        padding-top: 10px
+        display: flex
+        height: 55px
+        justify-content: space-evenly
+        align-items: center
+    .btn__group
+        position: absolute
+        right: 0%
+        display: flex
+        align-items: center
+        justify-content: end
+        .btn_circle
+            cursor: pointer
+            background: rgba(0,0,0,0)
+            margin-left: 25px
+            color: #000000
+            text-align: center
+            font-variant-numeric: lining-nums proportional-nums
+            font-family: Poppins
+            font-size: 16px
+            font-style: normal
+            font-weight: 600
+            line-height: 24px
+            width: 48px
+            height: 48px
+            border: 1px solid #000000
+            border-radius: 100%
+
+@import 'media'
+@import 'modals'
